@@ -80,8 +80,27 @@ export function Stage3Panel() {
             <StickSpectrum />
             <PeakTable />
           </div>
+          <ExternalSearchLinks formula={sel.formulaString} />
         </>
       )}
     </section>
+  );
+}
+
+function ExternalSearchLinks({ formula }) {
+  const q = encodeURIComponent(formula);
+  return (
+    <div className="search-links">
+      <div>
+        <a href={`https://www.google.com/search?q=${q}`} target="_blank" rel="noopener noreferrer">
+          Google Search for <span className="formula">{formula}</span>
+        </a>
+      </div>
+      <div>
+        <a href={`https://pubchem.ncbi.nlm.nih.gov/#query=${q}`} target="_blank" rel="noopener noreferrer">
+          PubChem Search for <span className="formula">{formula}</span>
+        </a>
+      </div>
+    </div>
   );
 }

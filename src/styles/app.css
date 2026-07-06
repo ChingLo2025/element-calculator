@@ -310,3 +310,18 @@ table.data td.num, table.data th.num { text-align: right; font-variant-numeric: 
   color: var(--text-mute);
 }
 .stick-controls button { padding: 2px 8px; }
+
+.search-links {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+.search-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.search-links a:hover { text-decoration: underline; color: var(--accent-hover); }
